@@ -1,0 +1,8 @@
+.todos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    list-style: none;
+    padding: 0;
+}

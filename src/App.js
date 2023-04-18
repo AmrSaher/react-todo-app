@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import AddTaskForm from './components/AddTaskForm'
+import TaskList from './components/TaskList'
+import './styles/App.css'
 
-function App() {
+export default function App() {
+  const [todos, setTodos] = useState([])
+
+  const getTodos = () => {
+    let todos = JSON.parse(localStorage.getItem('todos')) || []
+    setTodos(todos)
+  }
+
+  useEffect(() => {
+    getTodos()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1>My Todos</h1>
+      <AddTaskForm getTodos={getTodos} />
+      <TaskList todos={todos} getTodos={getTodos} />
     </div>
-  );
+  )
 }
-
-export default App;

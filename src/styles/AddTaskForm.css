@@ -1,0 +1,35 @@
+form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+form button {
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ff9900;
+    cursor: pointer;
+    transition: 0.3s opacity ease-in-out;
+}
+form button:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,39 @@
+.todo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.todo .done {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.todo .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo .actions button {
+    color: #000;
+    background-color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.todo .actions .complete {
+    border: 1px solid #45af87;
+    color: #45af87;
+}
+
+.todo .actions .delete {
+    border: 1px solid red;
+    color: red;
+}
